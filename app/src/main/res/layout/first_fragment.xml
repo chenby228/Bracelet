@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <kpy.view.FirstTabView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tab_sport_mile"
+        style="@style/base_tab_sport_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="0.0"
+        android:textSize="70sp" />
+    <TextView
+        android:id="@+id/tab_sport_mile_sign"
+        style="@style/base_tab_sport_text"
+        android:layout_below="@+id/tab_sport_mile"
+        android:layout_centerHorizontal="true"
+        android:text="跑步总里程(米)" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tab_sport_mile_sign"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tab_sport_time_num"
+                style="@style/base_tab_sport_text"
+                android:layout_centerHorizontal="true"
+                android:text="0.0"
+                android:textSize="24sp" />
+
+
+
+            <TextView
+                style="@style/base_tab_sport_text"
+                android:layout_below="@id/tab_sport_time_num"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="累计用时(分钟)"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tab_sport_num"
+                style="@style/base_tab_sport_text"
+                android:layout_centerHorizontal="true"
+                android:text="0.0"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/base_tab_sport_text"
+                android:layout_below="@+id/tab_sport_num"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="运动次数(次)"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp" >
+
+        <View
+            android:id="@+id/tab_sport_button_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_oval" />
+
+        <Button
+            android:id="@+id/tab_sport_start_bt"
+            android:layout_width="@dimen/tab_sport_button_height"
+            android:layout_height="@dimen/tab_sport_button_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_first_button"
+            android:text="开始跑步"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+        </RelativeLayout>
+
+</RelativeLayout>

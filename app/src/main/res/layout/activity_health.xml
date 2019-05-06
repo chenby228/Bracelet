@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/w_h_full"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+
+    <LinearLayout
+        style="@style/w_h_full"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/w_wrap_h_wrap"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/question_button_back"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/tab_physical"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/physical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="身体"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab_motion"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/motion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="运动"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:id="@+id/tab_sleep"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/sleep"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="睡眠"-->
+                    <!--android:textColor="@color/white" />-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+        <ImageView
+            style="@style/w_wrap_h_wrap"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/line1" />
+
+        <FrameLayout
+            android:id="@+id/content_health"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

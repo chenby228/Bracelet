@@ -303,10 +303,12 @@ public class LoginActivity extends BaseActivity {
         }
     };
 
+    public static String userId;
     class LoginThread implements Runnable {
         @Override
         public void run() {
             String username = login_name.getText().toString().trim();
+            userId = username;
             String password = login_password.getText().toString().trim();
 
             try {

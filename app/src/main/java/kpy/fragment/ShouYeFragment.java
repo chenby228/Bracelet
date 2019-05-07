@@ -1,5 +1,6 @@
 package kpy.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import kpy.App;
+import kpy.bracelet.Main2Activity;
 import kpy.bracelet.R;
 import kpy.fragment.shouye.ModelUtil;
 import kpy.fragment.shouye.PanoramaImageModel;
@@ -52,16 +54,17 @@ public class ShouYeFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
     }
 
+    private Intent intent;
     private void initListener() {
 
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
-            if (currPosition == position) return;
-            System.out.println("@@@@@@@@@  " + position);
             currPosition = position;
-            PanoramaImageModel model = mAdapter.getData().get(position);
-            System.out.println(model.toString());
+            //TODO
+            PanoramaImageModel panoramaImageModel = mAdapter.getData().get(position);
+            intent = new Intent(App.getContext(), Main2Activity.class);
+            intent.putExtra("panoramaImageModel",panoramaImageModel);
+            startActivity(intent);
 
-            //flag
         });
     }
 

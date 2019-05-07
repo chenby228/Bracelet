@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_title_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d4"
+            android:layout_toLeftOf="@+id/prl_image"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/f1" />
+
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/prl_image"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/imageView_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="1px"
+                android:scaleType="centerCrop"
+                app:layout_aspectRatio="150%"
+                app:layout_widthPercent="100%" />
+        </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="608dp">
+
+                <TextView
+                    android:id="@+id/tv_desc_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/d2"
+                    android:layout_marginRight="@dimen/d4"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:textColor="@color/c2"
+                    android:textSize="@dimen/f5" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:text="私聊"
+                    android:onClick="siLiao"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

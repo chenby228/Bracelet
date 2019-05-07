@@ -57,7 +57,7 @@ public class RegisterActivity extends BaseActivity {
     private ImageButton see_password_again;
     private Button register_button;
 
-    private String userId;
+    public static String userId;
     private String NewPassword;
     private String ConfirmPassword;
 

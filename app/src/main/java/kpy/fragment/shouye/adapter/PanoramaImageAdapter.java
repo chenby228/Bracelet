@@ -30,9 +30,9 @@ public class PanoramaImageAdapter extends BaseMultiItemQuickAdapter<PanoramaImag
 
     @Override
     protected void convert(BaseViewHolder helper, PanoramaImageModel item) {
-        helper.setText(R.id.tv_title, item.title);
-        helper.setText(R.id.tv_desc, item.desc);
-        helper.setImageResource(R.id.imageView, item.resourceName);
+        helper.setText(R.id.tv_title, item.getTitle());
+        helper.setText(R.id.tv_desc, item.getDesc());
+        helper.setImageResource(R.id.imageView, item.getResourceName());
     }
 
 }

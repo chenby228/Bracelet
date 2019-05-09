@@ -4,9 +4,6 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 import java.io.Serializable;
 
-/**
- * @author sunfusheng on 2017/8/25.
- */
 public class PanoramaImageModel implements MultiItemEntity, Serializable {
 
     private int type;

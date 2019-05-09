@@ -8,7 +8,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.database.sqlite.SQLiteDatabase;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -27,8 +26,6 @@ import java.util.List;
 import kpy.bean.StepData;
 import kpy.bracelet.R;
 import kpy.config.Constant;
-import kpy.fragment.SportFragment;
-import kpy.sqlite.SportDataDBHelper;
 import kpy.utils.DbUtils;
 
 public class StepService extends Service implements SensorEventListener {

@@ -10,7 +10,6 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import kpy.fragment.SettingFragment;
-import kpy.fragment.HealthFragment;
 import kpy.fragment.ShouYeFragment;
 import kpy.fragment.StepFragment;
 
@@ -23,17 +22,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private LinearLayout firsttab;
     private LinearLayout secondtab;
     private LinearLayout thirdtab;
-    private LinearLayout forthtab;
 
     private ImageButton firstimg;
     private ImageButton secondimg;
     private ImageButton thirdimg;
-    private ImageButton forthimg;
 
     private Fragment tab1;
     private Fragment tab2;
     private Fragment tab3;
-    private Fragment tab4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +45,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         firsttab= (LinearLayout) findViewById(R.id.tab_first);
         secondtab= (LinearLayout) findViewById(R.id.tab_second);
         thirdtab= (LinearLayout) findViewById(R.id.tab_third);
-        forthtab= (LinearLayout) findViewById(R.id.tab_forth);
 
         //image button
         firstimg= (ImageButton) findViewById(R.id.tab_first_img);
         secondimg= (ImageButton) findViewById(R.id.tab_second_img);
         thirdimg= (ImageButton) findViewById(R.id.tab_third_img);
-        forthimg= (ImageButton) findViewById(R.id.tab_forth_img);
 
     }
 
@@ -63,7 +57,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         firsttab.setOnClickListener(this);
         secondtab.setOnClickListener(this);
         thirdtab.setOnClickListener(this);
-        forthtab.setOnClickListener(this);
     }
 
     @Override
@@ -79,9 +72,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.tab_third:
                 SetSelect(2);
-                break;
-            case R.id.tab_forth:
-                SetSelect(3);
                 break;
             default:
                 break;
@@ -115,29 +105,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 secondimg.setImageResource(R.mipmap.tab_sport_selected);
                 break;
             case 2:
+
                 if(tab3==null)
                 {
-                    tab3=new HealthFragment();
-
+                    tab3=new SettingFragment();
                     transaction.add(R.id.content_frame,tab3);
                 }
                 else
                 {
                     transaction.show(tab3);
                 }
-                thirdimg.setImageResource(R.mipmap.tab_health_selected);
-                break;
-            case 3:
-                if(tab4==null)
-                {
-                    tab4=new SettingFragment();
-                    transaction.add(R.id.content_frame,tab4);
-                }
-                else
-                {
-                    transaction.show(tab4);
-                }
-                forthimg.setImageResource(R.mipmap.tab_me_selected);
+                thirdimg.setImageResource(R.mipmap.tab_me_selected);
                 break;
             default:
                 break;
@@ -158,17 +136,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         {
             transaction.hide(tab3);
         }
-        if(tab4!=null)
-        {
-            transaction.hide(tab4);
-        }
     }
 
     private void ResetImg() {
         firstimg.setImageResource(R.mipmap.tab_main_unselected);
         secondimg.setImageResource(R.mipmap.tab_sport_unselected);
-        thirdimg.setImageResource(R.mipmap.tab_health_unselected);
-        forthimg.setImageResource(R.mipmap.tab_me_unselected);
+        thirdimg.setImageResource(R.mipmap.tab_me_unselected);
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {

@@ -10,9 +10,6 @@ import java.util.List;
 import kpy.bracelet.R;
 import kpy.fragment.shouye.PanoramaImageModel;
 
-/**
- * @author sunfusheng on 2017/8/25.
- */
 public class PanoramaImageAdapter extends BaseMultiItemQuickAdapter<PanoramaImageModel, BaseViewHolder> {
 
     private Context context;

@@ -87,7 +87,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".RaidersActivity" />
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
@@ -118,10 +118,6 @@
         </service>
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".TestActivity" />
-        <activity
-            android:name=".PlayAlarmActivity"
-            android:theme="@style/Base.V7.Theme.AppCompat.Dialog" />
         <activity android:name=".BaseActivity" /> <!-- <activity android:name=".LoginActivity"/> -->
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SetPlanActivity" />
@@ -133,6 +129,7 @@
         <activity android:name=".ForgetActivity" />
         <activity android:name=".ResetActivity" />
         <activity android:name="kpy.chat.ChatActivity"/>
+        <activity android:name=".IssuePostActivity"/>
     </application>
 
 </manifest>

@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
-/**
- * @author by sunfusheng on 2017/7/20.
- */
 public class FragmentPagerItem {
 
     private String title;

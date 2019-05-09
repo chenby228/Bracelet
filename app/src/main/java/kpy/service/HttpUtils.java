@@ -18,7 +18,7 @@ public class HttpUtils {
         try {
             URL url = new URL(URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setConnectTimeout(50000);//超时时间
+            conn.setConnectTimeout(5000);//超时时间
             conn.setRequestMethod("POST");
             conn.setDoOutput(true);
             conn.setRequestProperty("Content-Type", "application/json");
@@ -44,7 +44,6 @@ public class HttpUtils {
         /**
          * @param inStream
          * @return
-         * @throws Exception
          */
         public static byte[] read(InputStream inStream) throws Exception {
             ByteArrayOutputStream outStream = new ByteArrayOutputStream();

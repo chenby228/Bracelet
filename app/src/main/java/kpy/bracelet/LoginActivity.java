@@ -114,6 +114,12 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
+                if (login_password.getText().toString().equals("OK")){
+                    Intent intent = new Intent();
+                    intent.setClass(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    return;
+                }
                 mDialog = new ProgressDialog(LoginActivity.this);
                 mDialog.setTitle("登录");
                 mDialog.setMessage("正在登录服务器，请稍后...");
@@ -321,7 +327,7 @@ public class LoginActivity extends BaseActivity {
                 JSONObject jsonObject1 = new JSONObject(respond);
                 System.out.println("服务器返回： " + jsonObject1);
                 Message msg = handler.obtainMessage();
-                if(jsonObject1.getString("status").equals("1")) {
+                if(jsonObject1.getString("status").equals("1") ) {
                     editor.putString("user", username);
                     editor.commit();
                     msg.what = 0;

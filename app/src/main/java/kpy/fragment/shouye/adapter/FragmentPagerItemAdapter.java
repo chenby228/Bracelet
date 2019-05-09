@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author by sunfusheng on 2017/7/20.
- */
 public class FragmentPagerItemAdapter extends FragmentPagerAdapter {
 
     private Context context;

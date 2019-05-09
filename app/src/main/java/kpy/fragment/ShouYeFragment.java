@@ -10,27 +10,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 import kpy.App;
-import kpy.bracelet.Main2Activity;
+import kpy.bracelet.IssuePostActivity;
+import kpy.bracelet.RaidersActivity;
 import kpy.bracelet.R;
 import kpy.fragment.shouye.ModelUtil;
 import kpy.fragment.shouye.PanoramaImageModel;
 import kpy.fragment.shouye.adapter.PanoramaImageAdapter;
-import kpy.fragment.shouye.utils.ImageUtil;
 
-public class ShouYeFragment extends Fragment {
-    private ImageView ivMine;
-    private TextView tvTitle;
+public class ShouYeFragment extends Fragment implements View.OnClickListener {
     //    public VrPanoramaView vrPanoramaView;
     private RecyclerView recyclerView;
 
     private PanoramaImageAdapter mAdapter;
     private int currPosition = 0;
 
+    private ImageView sousuo;
+    private ImageView shangchuan;
     private View view;
     @Nullable
     @Override
@@ -43,15 +43,17 @@ public class ShouYeFragment extends Fragment {
 
 
     private void initView() {
-        tvTitle = view.findViewById(R.id.tv_title);
-        ImageUtil.colorImageViewDrawable(ivMine, R.color.transparent60_white);
 
         currPosition = new Random().nextInt(ModelUtil.getPanoramaImageList().size());
-
+        sousuo = view.findViewById(R.id.iv_sousuo);
+        sousuo.setOnClickListener(this);
+        shangchuan = view.findViewById(R.id.shangchuan);
+        shangchuan.setOnClickListener(this);
         recyclerView = view.findViewById(R.id.recyclerView);
         mAdapter = new PanoramaImageAdapter(App.getContext(), ModelUtil.getPanoramaImageList());
         recyclerView.setLayoutManager(new LinearLayoutManager(App.getContext()));
         recyclerView.setAdapter(mAdapter);
+
     }
 
     private Intent intent;
@@ -61,11 +63,22 @@ public class ShouYeFragment extends Fragment {
             currPosition = position;
             //TODO
             PanoramaImageModel panoramaImageModel = mAdapter.getData().get(position);
-            intent = new Intent(App.getContext(), Main2Activity.class);
+            intent = new Intent(App.getContext(), RaidersActivity.class);
             intent.putExtra("panoramaImageModel",panoramaImageModel);
             startActivity(intent);
 
         });
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.shangchuan:
+                startActivity(new Intent(App.getContext(), IssuePostActivity.class));
+                break;
+            case R.id.iv_sousuo:
+                Toast.makeText(App.getContext(),"搜索功能还么做", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }

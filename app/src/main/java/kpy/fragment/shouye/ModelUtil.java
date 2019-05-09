@@ -6,9 +6,6 @@ import java.util.List;
 
 import kpy.bracelet.R;
 
-/**
- * Created by sunfusheng on 2017/8/2.
- */
 public class ModelUtil {
 
     public static List<String> title = new ArrayList<>();

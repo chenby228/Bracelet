@@ -12,12 +12,34 @@
         android:layout_height="48dp"
         android:background="@color/colorPrimary"
         app:layout_scrollFlags="scroll|enterAlways">
+
+        <ImageView
+            android:id="@+id/shangchuan"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="14dp"
+            android:src="@mipmap/shangchuan" />
+
+        <ImageView
+            android:id="@+id/iv_sousuo"
+            android:layout_width="57dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="102dp"
+            android:src="@mipmap/sousuo" />
     </RelativeLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
